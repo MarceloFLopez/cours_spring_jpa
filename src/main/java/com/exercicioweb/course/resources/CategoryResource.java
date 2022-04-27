@@ -13,7 +13,7 @@ import com.exercicioweb.course.entities.Category;
 import com.exercicioweb.course.services.CategorySrevice;
 
 @RestController
-@RequestMapping("/categorys")
+@RequestMapping("/categories")
 public class CategoryResource {
 
 	@Autowired

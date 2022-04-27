@@ -20,7 +20,7 @@ public class CategorySrevice {
 	}
 
 	public Category findById(Long id) {
-		Optional<Category> obj =repository.findById(id);
+		Optional<Category> obj = repository.findById(id);
 		return obj.get();
 	}
 }
