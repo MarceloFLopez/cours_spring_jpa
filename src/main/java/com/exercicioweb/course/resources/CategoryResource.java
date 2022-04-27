@@ -10,25 +10,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.exercicioweb.course.entities.Category;
-import com.exercicioweb.course.services.CategorySrevice;
+import com.exercicioweb.course.services.CategoryService;
 
 @RestController
-@RequestMapping("/categories")
+@RequestMapping(value = "/categories")
 public class CategoryResource {
 
-	@Autowired
-	private CategorySrevice service;
-
+	@Autowired 
+	private CategoryService service;
+	
 	@GetMapping
 	public ResponseEntity<List<Category>> findAll() {
 		List<Category> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
-
+	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<Category> findById(@PathVariable Long id){
+	public ResponseEntity<Category> findById(@PathVariable Long id) {
 		Category obj = service.findById(id);
 		return ResponseEntity.ok().body(obj);
 	}
-
 }
