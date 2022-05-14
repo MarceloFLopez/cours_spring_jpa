@@ -1,4 +1,4 @@
-# cours_spring_jpa
+# Programa para controle de fluxp de caixa - nível Básico
 
 Projeto  Sistema básico para controle de pedidos
 
